@@ -1,66 +1,110 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# FineTracker
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+FineTracker est une application web développée avec Laravel qui permet aux utilisateurs de suivre leurs dépenses et leurs revenus, de catégoriser leurs dépenses, et de visualiser un tableau de bord personnalisé avec un résumé de leurs transactions.
 
-## About Laravel
+## Introduction
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+La gestion des finances personnelles est essentielle pour contrôler ses dépenses, planifier ses économies et gérer ses revenus efficacement. FineTracker aide les utilisateurs à mieux suivre leurs finances en offrant une plateforme simple et intuitive pour enregistrer et visualiser leurs transactions financières.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Fonctionnalités Principales
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Suivi des Dépenses et Revenus** : Enregistrez et suivez toutes vos transactions financières.
+- **Catégorisation des Dépenses** : Classez vos dépenses par catégories pour une meilleure organisation.
+- **Tableau de Bord Personnalisé** : Visualisez un résumé de vos transactions avec des cartes pour les dépenses totales, les revenus totaux et le solde.
+- **Authentification des Utilisateurs** : Inscription, connexion et déconnexion sécurisées.
+- **Opérations CRUD** : Gérez les catégories, les revenus et les dépenses avec des opérations de création, lecture, mise à jour et suppression.
 
-## Learning Laravel
+## Installation
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Prérequis
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- PHP >= 7.3
+- Composer
+- MySQL
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Étapes d'Installation
 
-## Laravel Sponsors
+1. Clonez le dépôt GitHub :
+    ```sh
+    git clone https://github.com/Wilfried0711/FineTracker.git
+    cd FineTracker
+    ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+2. Installez les dépendances :
+    ```sh
+    composer install
+    ```
 
-### Premium Partners
+3. Configurez les variables d'environnement :
+    - Dupliquez le fichier `.env.example` et renommez-le en `.env`.
+    - Configurez les informations de votre base de données dans le fichier `.env`.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+4. Générez la clé d'application :
+    ```sh
+    php artisan key:generate
+    ```
 
-## Contributing
+5. Exécutez les migrations :
+    ```sh
+    php artisan migrate
+    ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+6. Démarrez le serveur de développement :
+    ```sh
+    php artisan serve
+    ```
 
-## Code of Conduct
+### Instructions pour Cloner et Exécuter l'Application en Local
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+1. Assurez-vous d'avoir installé tous les prérequis mentionnés ci-dessus.
+2. Suivez les étapes d'installation ci-dessus pour cloner le dépôt, installer les dépendances, configurer les variables d'environnement, générer la clé d'application et exécuter les migrations.
+3. Lancez le serveur de développement avec la commande `php artisan serve`.
+4. Accédez à l'application via `http://localhost:8000` dans votre navigateur web.
 
-## Security Vulnerabilities
+## Structure des Données
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Modèles et Migrations
 
-## License
+- **User** : Utilisateurs (système d'authentification Laravel).
+- **Category** : Catégories de dépenses.
+    - `id`
+    - `name`
+    - `user_id`
+    - `created_at`
+    - `updated_at`
+- **Revenue** : Revenus.
+    - `id`
+    - `user_id`
+    - `amount`
+    - `description`
+    - `is_recurrent` (booléen, par défaut false)
+    - `revenue_date`
+    - `created_at`
+    - `updated_at`
+- **Expense** : Dépenses.
+    - `id`
+    - `category_id`
+    - `user_id`
+    - `amount`
+    - `description`
+    - `is_recurrent` (booléen, par défaut false)
+    - `expense_date`
+    - `created_at`
+    - `updated_at`
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Associations des Données
+
+- Chaque `Category`, `Revenue` et `Expense` est associé à un `User` via le champ `user_id`.
+- Les relations sont configurées dans les modèles Laravel pour gérer ces associations (`belongsTo`, `hasMany`).
+
+## Tableau de Bord
+
+- **Montant Total des Dépenses** : Affiche le total des dépenses.
+- **Montant Total des Revenus** : Affiche le total des revenus.
+- **Solde** : Affiche le solde actuel (revenus - dépenses).
+- **Dernières Dépenses** : Tableau des 5 dernières dépenses.
+
+## Sécurité
+
+- Accès aux fonctionnalités de gestion des catégories, revenus et dépenses restreint aux utilisateurs connectés.
+- Utilisation du système d'authentification Laravel.
