@@ -1,0 +1,20 @@
+1 /.phpunit.cache
+    2 /node_modules
+    3 /public/build
+    4 /public/hot
+    5 /public/storage
+    6 /storage/*.key
+    7 /vendor
+    8 .env
+    9 .env.backup
+   10 .env.production
+   11 .phpactor.json
+   12 .phpunit.result.cache
+   13 Homestead.json
+   14 Homestead.yaml
+   15 auth.json
+   16 npm-debug.log
+   17 yarn-error.log
+   18 /.fleet
+   19 /.idea
+   20 /.vscode
